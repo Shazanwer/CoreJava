@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Arrays;
+
 public class ReversalExamples {
 
 	public static void main(String[] args) {
@@ -17,12 +19,15 @@ public class ReversalExamples {
 		// Reversal of Array
 
 		int[] Arr2 = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-		int[] revArr2 = null;
-//		int[] revArr2 = new int[10];
+		int[] revArr2 = new int[10];
+		int x = 0;
 		for (int i = Arr2.length - 1; i >= 0; i--) {
-			revArr2 = Arr2;
-			System.out.println("reversal of array is " + revArr2[i]);
+			revArr2[x] = Arr2[i];
+			x = x + 1;
+//			System.out.println("reversal of array is " + revArr2[i]);
 		}
+		System.out.println("Actual String in array is " + Arrays.toString(Arr2));
+		System.out.println("Reversed String in array is " + Arrays.toString(revArr2));
 
 		// reversal of no
 
@@ -41,7 +46,7 @@ public class ReversalExamples {
 		String newNum = Integer.toString(Num);
 		String revNum = "";
 		int reversedNum;
-		 
+
 		for (int i = newNum.length() - 1; i >= 0; i--) {
 			revNum = revNum + newNum.charAt(i);
 		}
