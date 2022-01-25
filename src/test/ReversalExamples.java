@@ -34,8 +34,8 @@ public class ReversalExamples {
 		int Number = 123456789;
 		int revNumber = 0;
 		while (Number != 0) {
-			int Digit = Number % 10;
-			revNumber = revNumber * 10 + Digit;
+			int Rem = Number % 10;
+			revNumber = revNumber * 10 + Rem;
 			Number = Number / 10;
 		}
 		System.out.println("Reversed integer is " + revNumber);
