@@ -7,6 +7,10 @@ public class Employee {
 	int Salary;
 	public static String CompanyName = "SimpliLearn"; //it will remain same throughout the execution of the program
 	
+	public Employee () {
+		
+	}
+	
 	public Employee (String Name, int EmpID, int Salary) { //constructor should have same name as class and does not have any return type
 		this.Name = Name;
 		this.EmplID = EmpID;
