@@ -3,7 +3,7 @@ package oops;
 public class AbstractionExample extends Bank {
 
 	@Override
-	public void chackBalance() {
+	public void checkBalance() {
 		// TODO Auto-generated method stub
 		
 	}
