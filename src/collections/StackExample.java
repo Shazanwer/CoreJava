@@ -16,7 +16,7 @@ public class StackExample {
 		stack1.add(34);
 		
 		System.out.println(stack1);
-		System.out.println(stack1.peek());  //print the top value of the stack
+		System.out.println(stack1.peek());  //print the top value (last value) of the stack
 		
 		System.out.println(stack1.firstElement()); //it is part of vector
 	}
