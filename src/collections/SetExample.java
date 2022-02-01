@@ -39,20 +39,32 @@ public class SetExample {
 		System.out.println(lhs);
 
 		TreeSet<String> ts = new TreeSet<String>(); // data is stored in the form of linked list and
-		// maintain order it is stored and also store in ascending order
-
-		// does not save duplicate value
+													// maintain order it is stored and also store in ascending order
+													// does not save duplicate value
 
 		ts.add("john");
 		ts.add("Sam");
 		ts.add("Anwer");
 		ts.add("Neil");
 		ts.add("Anwer");
-		
 
 		System.out.println(ts);
-		
-		//to do remove duplicate words Green World Clean World
+
+		// to do remove duplicate words Green World Clean World
+
+		String text = "Green World Clean World";
+		String[] arrText = text.split(" ");
+
+		TreeSet<String> ts1 = new TreeSet<String>();
+		for (int i = arrText.length - 1; i >= 0; i--) {
+			ts1.add(arrText[i]);
+		}
+		System.out.println(ts1);		
+		for (Object i: ts1.toArray()) {
+			  System.out.print(i);
+			  System.out.print(" ");
+			}
+			System.out.println();
 
 	}
 
