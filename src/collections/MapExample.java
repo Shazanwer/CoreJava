@@ -74,20 +74,20 @@ public class MapExample {
 
 		// to do: occurrence of each word in the string
 
-		String text = "Clean India Green India Love India";
+		String text = "Love Clean India Green India Love India";
 		TreeMap<String, Integer> tmap2 = new TreeMap<String, Integer>();
 		String[] str = text.split(" ");
 		int cnt = 0;
-		for (int x = 0; x < str.length - 1; x++) {
-			for (int y = 0; y < str.length - 1; y++) {
-				if (str[x].equals(str[y])) {
+		for (String str1: str) {
+			for (String str2: str) {
+				if (str1.equals(str2)) {
 					cnt = cnt + 1;
 				}
 			}
-			tmap2.put(str[x], cnt);
+			tmap2.put(str1, cnt);
 			cnt = 0;
 		}
-//		System.out.println("Count:" + tmap2);
+		System.out.println("Occurrence of each word in the string:" + tmap2);
 		for (Entry<String, Integer> entry2 : tmap2.entrySet()) { // iterate through the hash map using entry set
 			System.out.println(entry2.getKey() + " " + entry2.getValue());			
 		}
