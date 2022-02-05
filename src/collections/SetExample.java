@@ -53,11 +53,10 @@ public class SetExample {
 		// to do remove duplicate words Green World Clean World
 
 		String text = "Green World Clean World";
-		String[] arrText = text.split(" ");
-
+		
 		TreeSet<String> ts1 = new TreeSet<String>();
-		for (int i = arrText.length - 1; i >= 0; i--) {
-			ts1.add(arrText[i]);
+		for (String str: text.split(" ")) {
+			ts1.add(str);
 		}
 		System.out.println(ts1);		
 		for (Object i: ts1.toArray()) {
