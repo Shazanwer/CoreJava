@@ -21,6 +21,7 @@ public class MapExample {
 
 		hmap1.put(3, "Neil");
 		System.out.println(hmap1); // Update the data in map
+		System.out.println("get" + hmap1.get(1)); // fetch value based on its key
 
 		hmap1.remove(3);
 		System.out.println("HashMap" + hmap1); // remove data from map
@@ -39,6 +40,7 @@ public class MapExample {
 			System.out.println("Value is: " + val);
 		}
 
+		// Linked Hash Map
 		LinkedHashMap<Integer, String> lhmap1 = new LinkedHashMap<Integer, String>(); // insertion order will be
 																						// maintained
 
@@ -54,6 +56,7 @@ public class MapExample {
 //		lhmap1.remove(3);
 		System.out.println("LinkedHashMap" + lhmap1); // remove data from map
 
+		// Tree Map
 		TreeMap<Integer, String> tmap1 = new TreeMap<Integer, String>(); // insertion order will be maintained and in
 																			// ascending order
 
@@ -68,11 +71,28 @@ public class MapExample {
 
 //		lhmap1.remove(3);
 //		System.out.println(tmap1); // remove data from map
+
+		// to do: occurrence of each word in the string
+
+		String text = "Clean India Green India Love India";
+		TreeMap<String, Integer> tmap2 = new TreeMap<String, Integer>();
+		String[] str = text.split(" ");
+		int cnt = 0;
+		for (int x = 0; x < str.length - 1; x++) {
+			for (int y = 0; y < str.length - 1; y++) {
+				if (str[x].equals(str[y])) {
+					cnt = cnt + 1;
+				}
+			}
+			tmap2.put(str[x], cnt);
+			cnt = 0;
+		}
+//		System.out.println("Count:" + tmap2);
+		for (Entry<String, Integer> entry2 : tmap2.entrySet()) { // iterate through the hash map using entry set
+			System.out.println(entry2.getKey() + " " + entry2.getValue());			
+		}
 		
 		
-		//to do: occurrence of each word in the string
-		
-		String str = "Clean India Green India Love India";
 
 	}
 
