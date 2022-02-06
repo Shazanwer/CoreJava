@@ -2,6 +2,7 @@ package collections;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
@@ -91,6 +92,26 @@ public class MapExample {
 		for (Entry<String, Integer> entry2 : tmap2.entrySet()) { // iterate through the hash map using entry set
 			System.out.println(entry2.getKey() + " " + entry2.getValue());			
 		}
+		
+		// Alternate way
+		 String str1 ="Love Clean India Green India Love India";
+	        LinkedHashMap <String, Integer> hs1 = new LinkedHashMap<String, Integer>();
+	        String[] words = str1.toLowerCase().split(" ");
+	        for (String word: words) {
+	            if (hs1.containsKey(word))
+	            {
+	                hs1.put(word, hs1.get(word)+1);
+	                
+	            }
+	                else {
+	                    hs1.put(word,1);
+	                }
+	            }
+	        
+	        for (Map.Entry<String, Integer> entry1 : hs1.entrySet()) {
+	            System.out.print(entry1.getKey()+" ");
+	            System.out.print(entry1.getValue()+" ");
+	        }
 		
 		
 
