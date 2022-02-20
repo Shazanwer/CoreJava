@@ -5,6 +5,8 @@ public class ArraysExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		int[] List = new int[100];
+		
 		int num1[] = {10,20,30,50};
 		System.out.println("Total no in the the array is " + num1.length);
 		System.out.println(("Value at 3rd position is " + num1[2]));

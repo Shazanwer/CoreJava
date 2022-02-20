@@ -2,7 +2,7 @@ package oops;
 
 public abstract class Bank {
 	
-	public abstract void chackBalance();
+	public abstract void checkBalance();
 	
 	public abstract void depositMoney();
 
